@@ -1,5 +1,9 @@
 #!/usr/bin/env groovy
 pipeline {
+    agent {
+      any
+    }
+    environment {}
     // https://www.jenkins.io/doc/book/pipeline/syntax/#options
     options {
       // https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/tasks/LogRotator.java#L87
@@ -9,6 +13,7 @@ pipeline {
         )
       )
     }
+    post {}
     stages {
         stage('01') {
             steps {
