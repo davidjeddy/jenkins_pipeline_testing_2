@@ -13,9 +13,9 @@ pipeline {
     stages {
         stage('01') {
             steps {
-                sh '''
-                  #!/bin/bash -ex
+                sh '''#!/bin/bash
                   echo 'starting'
+                  declare i
                   i=0
                   while [[ $i -le 10 ]]
                   do
