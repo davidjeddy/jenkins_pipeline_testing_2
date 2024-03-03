@@ -20,7 +20,7 @@ pipeline {
                   while [[ $i -le 100000000 ]]
                   do
                     echo "counter: $i"
-                    i=$i+1
+                    i=$(($i + 1))
                     sleep 10
                   done
                   echo 'done'
