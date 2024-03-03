@@ -1,5 +1,4 @@
 // https://gist.github.com/merikan/228cdb1893fca91f0663bab7b095757c
-#!/usr/bin/env groovy
 pipeline {
     agent any
     // https://www.jenkins.io/doc/book/pipeline/syntax/#options
