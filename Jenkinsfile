@@ -1,10 +1,7 @@
 // https://gist.github.com/merikan/228cdb1893fca91f0663bab7b095757c
 #!/usr/bin/env groovy
 pipeline {
-    agent {
-      any
-    }
-    environment {}
+    agent any
     // https://www.jenkins.io/doc/book/pipeline/syntax/#options
     options {
       // https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/tasks/LogRotator.java#L87
@@ -14,7 +11,6 @@ pipeline {
         )
       )
     }
-    post {}
     stages {
         stage('01') {
             steps {
@@ -33,5 +29,8 @@ pipeline {
                 '''
             }
         }
+    }
+    tools {
+      git 'Default'
     }
 }
