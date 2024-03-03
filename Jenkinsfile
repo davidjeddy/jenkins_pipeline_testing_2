@@ -16,7 +16,6 @@ pipeline {
                 sh '''
                   #!/bin/bash -ex
                   echo 'starting'
-                  declare i
                   i=0
                   while [[ $i -le 10 ]]
                   do
