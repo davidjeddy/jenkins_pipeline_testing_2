@@ -17,7 +17,7 @@ pipeline {
                   echo 'starting'
                   declare i
                   i=0
-                  while [[ $i -le 10 ]]
+                  while [[ $i -le 100000000 ]]
                   do
                     echo "counter: $i"
                     i=$i+1
@@ -27,8 +27,5 @@ pipeline {
                 '''
             }
         }
-    }
-    tools {
-      git 'Default'
     }
 }
