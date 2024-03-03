@@ -1,6 +1,13 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent {}
+    options {
+      buildDiscarder(
+        logRotator(
+          numToKeepStr: '7',
+          artifactNumToKeepStr: '7'
+        )
+      )
+    }
     stages {
         stage('stage_1') {
             steps {
